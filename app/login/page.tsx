@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Logo } from '@/components/Logo'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import { LoginForm } from './LoginForm'
 
 export const metadata: Metadata = { title: 'Log in' }
@@ -8,6 +9,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
   const { error } = await searchParams
   return (
     <main className="auth-page">
+      <ThemeToggle floating />
       <div className="auth-brand">
         <Logo size={44} />
         <h1>Nimbus CRM</h1>

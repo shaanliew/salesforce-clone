@@ -1,0 +1,8 @@
+export function Logo({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden>
+      <path fill="#1b5fd6" d="M16 2l12 7v14l-12 7-12-7V9z" />
+      <path fill="#fff" d="M11 22V10h2.4l5.2 7.6V10H21v12h-2.4l-5.2-7.6V22z" />
+    </svg>
+  )
+}

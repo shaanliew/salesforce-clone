@@ -5,6 +5,7 @@ import { NAV, OBJECTS, humanize } from '@/lib/objects'
 import { signOut } from '@/app/actions'
 import { Logo } from '@/components/Logo'
 import { NavTabs } from '@/components/NavTabs'
+import { ThemeToggle } from '@/components/ThemeToggle'
 
 export const dynamic = 'force-dynamic'
 
@@ -38,6 +39,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         <form action="/search" className="global-search" role="search">
           <input type="search" name="q" placeholder="Search accounts, contacts, leads, opportunities…" aria-label="Search" />
         </form>
+        <ThemeToggle />
         <details className="user-menu">
           <summary aria-label="Account menu">
             <span className="avatar">{initials || 'U'}</span>
